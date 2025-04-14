@@ -29,7 +29,7 @@ const page = () => {
     <div className='w-screen h-screen bg-white flex flex-col relative'>
       <Topbar/>
       <form className='p-10 xl:p-0 w-full h-full flex items-center justify-center bottom-0 bg-yellow-50' onSubmit={(e)=>handleLogin(e)}>
-        <div className='w-full p- xl:w-1/3 flex flex-col items-center justify-center gap-4 bg-white rounded-2xl p-6'>
+        <div className='w-full p- xl:w-1/3 flex flex-col items-center justify-center gap-4 bg-white rounded-2xl p-6 border border-gray-900'>
         <h1 className='text-xl font-bold text-black'>Log in to e-lookup</h1>
         <input type="email" placeholder='username or email' className='border rounded-xl p-2 w-full' onChange={e=>setEmailInput(e.target.value)}/>
         <input type="password" placeholder='password' className='border rounded-xl p-2 w-full' onChange={e=>setPassword(e.target.value)}/>

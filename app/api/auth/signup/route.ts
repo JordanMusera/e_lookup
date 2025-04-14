@@ -6,7 +6,7 @@ import bcrypt, { genSalt } from 'bcrypt';
 export async function POST(request: Request) {
     try {
         await dbConnect();
-        const { email, password } = await request.json()
+        const { username,email, password } = await request.json()
         console.log("Email: " + email + "\n" + "password: " + password);
 
         const user = await User.findOne({ email });
@@ -19,6 +19,7 @@ export async function POST(request: Request) {
 
         const hashedPassword = await hashPassword(password);
         const newUser = await User.create({
+            username:username,
             email: email,
             password: hashedPassword
         })
