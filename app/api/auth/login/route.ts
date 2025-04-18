@@ -20,7 +20,7 @@ export async function POST(request:Request){
     const passValid = await validatePass(password,user.password);
 
     if(passValid){
-        const cookie = await createCookie(user._id,user.email)
+        const cookie = await createCookie(user._id,user.email,user.role)
         return NextResponse.json({
             success:true,
             message:"User authenticated successfully!"
@@ -43,17 +43,17 @@ const validatePass =(password:string,hashedPassword:string)=>{
 }
 
 
-const createCookie=(id:string,email:string)=>{
+const createCookie=(id:string,email:string,role:string)=>{
     //create token
     const token = jwt.sign(
-        { id: id, email: email },
+        { id: id, email: email, role: role },
         process.env.JWT_SECRET || 'default_secret_key',
         { expiresIn: '7d' }
       );
       
 
     //create cookie
-    const cookie = serialize('token',token,{
+    const cookie = serialize('auth',JSON.stringify({ token, role }),{
         httpOnly:true,
         path:'/',
         sameSite:true,

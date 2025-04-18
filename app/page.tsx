@@ -2,6 +2,7 @@ import React from 'react'
 import Topbar from './components/Topbar'
 import { EditOutlined,PlusOutlined,BankOutlined } from '@ant-design/icons'
 
+
 const page = () => {
   return (
     <div className='flex flex-col items-center gap-3 relative'>
@@ -9,13 +10,13 @@ const page = () => {
         <Topbar/>
       </div>
       
-      <div className='flex justify-center w-3/4 overflow-y-auto mt-20 relative'>
-        <img src="https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/v1741896805/brontes/hero/ApartmentCoder.png" alt="Description" className="w-full h-1/2 m-2 rounded-2xl" />
-        <p className='w-1/2 absolute text-white text-6xl top-1/2 p-2'>E-LOOKUP <br />Connecting clients in need to free-lancers who deliver</p>
+      <div className='flex justify-center w-5/6 md:w-3/4 overflow-y-auto mt-20 relative'>
+        <img src="https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/v1741896805/brontes/hero/ApartmentCoder.png" alt="Description" className="w-full h-1/2 mt-3 rounded-2xl" />
+        <p className='w-1/2 absolute text-white text-2xl md:text-4xl xl:text-6xl top-1/4 p-2'>E-LOOKUP <br />Connecting clients in need of services and products</p>
       </div>
 
-      <div className='flex w-3/4 justify-between items-center gap-10 mb-20'>
-      <img src="https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/f_auto,q_auto/brontes/for-enterprise/enterprise-2023.jpg" alt="Description" className="w-1/4 h-full m-2 rounded-2xl" /> 
+      <div className='flex flex-col md:flex-row w-5/6 md:w-3/4 justify-between items-center gap-10 mb-20'>
+      <img src="https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/f_auto,q_auto/brontes/for-enterprise/enterprise-2023.jpg" alt="Description" className="w-full md:w-1/4 h-full m-2 rounded-2xl" /> 
 
       <div className='flex flex-col gap-4'>
         <p className='text-4xl font-semibold'>Up your work game, it's easy</p>
@@ -41,7 +42,7 @@ const page = () => {
           <BankOutlined/>
           <div className='flex flex-col gap-2'>
             <p className='text-md font-semibold'>Work with the best—without breaking the bank</p>
-            <p>Upwork makes it affordable to up your work and take advantage of low transaction rates.</p>
+            <p>Elookup makes it affordable to up your work and take advantage of low transaction rates.</p>
           </div>
 
         </div>
