@@ -6,9 +6,12 @@ import React from "react";
 
 const page = () => {
     return (
-        <div className="flex flex-col items-center">
-            <Topbar2 />
-            <div className="p-10 flex flex-col w-full md:w-8/10 gap-3">
+        <div className="flex flex-col items-center relative">
+            <div className="fixed w-full top-0 z-100">
+                <Topbar2 />
+            </div>
+            
+            <div className="p-10 flex flex-col w-full md:w-8/10 gap-3 mt-10">
                 <div className="w-full md:w-3/4 flex flex-col gap-5">
                     <div className="w-full h-max bg-gray-800 rounded-2xl flex flex-col md:flex-row items-center justify-center gap-3 p-5">
                         <div className="w-full flex justify-center">
@@ -31,22 +34,20 @@ const page = () => {
                     </div>
                     <div className="w-full h-max rounded-xl">
                         <div>
-                            <ul className="flex justify-between items-center p-5 text-xl text-black font-bold">
+                            <ul className="flex justify-between items-center p-5 text-xl text-black font-bold bg-gray-100">
                                 <li className="bg-gray-500 p-2 rounded-md">Profile Overview</li>
                                 <li className="bg-gray-500 p-2 rounded-md">Services</li>
                                 <li>Portfolio</li>
                             </ul>
-                            <hr />
+                            <hr className="bg-gray-500 mb-5"/>
                             {/* <Seller_profile_container/> */}
                             <Seller_services_container/>
                         </div>
                     </div>
                 </div>
-
-
-
-                <div className="w-1/4 bg-black"></div>
             </div>
+           
+
         </div>
     );
 };
